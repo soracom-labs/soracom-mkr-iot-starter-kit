@@ -12,12 +12,12 @@ Using the Soracom.io network and cloud platform, you can get your device connect
 # Table of Contents
 - [Getting Started](#getting-started)
 - [Soracom Cloud Examples](./soracom-cloud-examples/README.md)
-  - [Arduino MKR GSM 1400 Examples](./soracom-cloud-examples/arduino-mkr-gsm-1400/README.md) s
-    - [send-data-to-soracom-harvest](soracom-cloud-examples/arduino-mkr-gsm-1400/send-data-to-soracom-harvest/soracom-harvest.ino)
-    - [soracom-unified-grove](soracom-cloud-examples/arduino-mkr-gsm-1400/soracom-unified-grove/soracom-unified.ino)
+  - [Arduino MKR GSM 1400 Examples](./soracom-cloud-examples/arduino-mkr-gsm-1400/README.md)
+    - [send-data-to-soracom-harvest](soracom-cloud-examples/arduino-mkr-gsm-1400/send-data-to-soracom-harvest/)
+    - [soracom-unified-grove](soracom-cloud-examples/arduino-mkr-gsm-1400/soracom-unified-grove/)
   - [Arduino MKR NB 1500 Examples](./soracom-cloud-examples/arduino-mkr-nb-1500/README.md)
-    - [send-data-to-soracom-harvest](soracom-cloud-examples/arduino-mkr-nb-1500/send-data-to-soracom-harvest/soracom-harvest.ino)
-    - [soracom-unified-grove](soracom-cloud-examples/arduino-mkr-nb-1500/soracom-unified-grove/soracom-unified.ino)
+    - [send-data-to-soracom-harvest](soracom-cloud-examples/arduino-mkr-nb-1500/send-data-to-soracom-harvest/)
+    - [soracom-unified-grove](soracom-cloud-examples/arduino-mkr-nb-1500/soracom-unified-grove/)
 - [Grove Sensor Examples](./grove-sensor-examples/README.md)
   - [grove-accelerometer](./grove-sensor-examples/grove-accelerometer/README.md)
   - [grove-button](./grove-sensor-examples/grove-button/README.md)
