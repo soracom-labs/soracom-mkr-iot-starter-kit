@@ -4,7 +4,7 @@
 
 ![soracom-grove-all](./content/soracom-grove-all.png "A graphic of all the grove sensors attached to the kit.")
 
-The Soracom IoT Starter Kit includes everything you need to build your first connected device. It includes an [Arduino MKR GSM 1400](https://store.arduino.cc/usa/mkr-gsm-1400) or an [Arduino MKR NB 1500](https://store.arduino.cc/usa/arduino-mkr-nb-1500) development board.
+The Soracom IoT Starter Kit includes everything you need to build your first connected device. It includes an [Arduino MKR GSM 1400](https://www.soracom.io/store/soracom-arduino-1400-starter-kit/) or an [Arduino MKR NB 1500](https://www.soracom.io/store/soracom-arduino-1500-starter-kit/) development board.
 Using the Soracom.io network and cloud platform, you can get your device connected and publishing data to a dashboard within minutes. 
 
 ![kit-contents](./content/PENF4508.jpg "The contents of the kit")
