@@ -80,6 +80,13 @@ void setup() {
   MODEM.sendf("ATI9");
   MODEM.waitForResponse(2000);
   
+/**
+   * On some u-blox R410M modems with older firmware, the frequency bands are incorrectly locked to
+   * specific regions even though the MNO profile is set to 0 == default (global coverage). These
+   * AT commands will reset the modem to the correct factory default settings. Generally, you only
+   * need to run this one time. Once your MKR NB 1500 has connected to a network, you can remove
+   * this code section since the correct connection settings will be stored directly on the modem.
+   */
  // Run AT commands to reset the modem to global default settings
  Serial.print(">>> Resetting modem to default settings...");
  MODEM.sendf("AT+CFUN=0");
