@@ -29,12 +29,12 @@ Before using it you must configure a Soracom Beam MQTT entry point.
 
 1. Sign into the [Soracom Console](https://console.soracom.io/).
 2. Choose **Groups** from the menu.
-![beam-groups](../../../content/beam-groups.png)
-3. Choose an existing group or create one. If you havent already, add your device's SIM to a group. 
-4. Create a new **Soracom Beam MQTT entry point**.
-![beam-create-entry](../../../content/beam-create-entry.png)
-5. Configure the entry point as neccesary for your cloud integration. Once saved, your Soracom Beam MQTT entry point live.
-![beam-config](../../../content/beam-config.png)
+<img src="../../../content/beam-groups.png" alt="beam-groups" width="50%"/>
+1. Choose an existing group or create one. If you havent already, add your device's SIM to a group. 
+2. Create a new **Soracom Beam MQTT entry point**.
+<img src="../../../content/beam-create-entry.png" alt="beam-create-entry" width="50%"/>
+1. Configure the entry point as neccesary for your cloud integration. Once saved, your Soracom Beam MQTT entry point live.
+<img src="../../../content/beam-config.png" alt="beam-config" width="50%"/>
 
 ## Program Sketch
 
