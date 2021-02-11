@@ -21,28 +21,48 @@ GPRS gprs;
 NB nbAccess(PRINT_AT);
 HttpClient http(client, server, port);
 
+// connection state
+  bool connected = false;
+
 // Publish interval
 long previousMillis = 0; 
-long interval = 10000;
+long interval = 20000; // milliseconds
 
 void setup() {
+  pinMode(SARA_RESETN, OUTPUT);
+  pinMode(SARA_PWR_ON, OUTPUT);
+  
+  //Initialize serial and wait for port to open:
   Serial.begin(115200);
+  while (!Serial) {
+    ; // wait for serial port to connect. Needed for native USB port only
+  }
+  
   start_and_connect_modem();
 }
 
 void loop() {
   unsigned long currentMillis = millis(); 
 
-  StaticJsonDocument<200> doc;
-  doc["time"] = millis();
-  doc["sensor_a0"] = analogRead(0);
-  char jsonBuffer[512];
-  serializeJson(doc, jsonBuffer); // print to client
-  
-  // Enforce Interval
-  if(currentMillis - previousMillis > interval) {
-    previousMillis = currentMillis;
-    post_data(jsonBuffer);  
+  // Make sure the device is still connected to CatM network
+  if (nbAccess.isAccessAlive()) {
+    // Enforce Interval
+    if(currentMillis - previousMillis > interval) {
+      previousMillis = currentMillis;
+
+      // Construct the JSON data to send
+      StaticJsonDocument<200> doc;
+      doc["time"] = millis();
+      doc["sensor_a0"] = analogRead(0);
+      char jsonBuffer[512];
+      serializeJson(doc, jsonBuffer); // print to client
+      post_data(jsonBuffer); 
+    }
+  } else {
+    Serial.println("Modem disconnected, reconnecting");
+    connected = false;
+    nbAccess.shutdown(); // Reset the modem
+    start_and_connect_modem();
   }
 }
 
@@ -66,20 +86,13 @@ void post_data(String postData) {
 }
 
 void start_and_connect_modem(){
-  pinMode(SARA_RESETN, OUTPUT);
   digitalWrite(SARA_RESETN, LOW);
 
   // Send Poweron pulse
-  pinMode(SARA_PWR_ON, OUTPUT);
   digitalWrite(SARA_PWR_ON, HIGH);
   delay(150);
   digitalWrite(SARA_PWR_ON, LOW);
-  //Initialize serial and wait for port to open:
-  
-  while (!Serial) {
-    ; // wait for serial port to connect. Needed for native USB port only
-  }
-
+  delay(1000);
   // Turn on the modem
   if (Serial) Serial.print(">>> Turning on modem...");
   if (MODEM.begin()) {
@@ -116,9 +129,12 @@ void start_and_connect_modem(){
   delay(2000);
   // attempt to connect to GSM and GPRS:
   Serial.print("Attempting to connect to GSM and GPRS");
-   // connection state
-  bool connected = false;
+   
+  connect_modem();
+  
+}
 
+void connect_modem(){
   // After starting the modem with GSM.begin()
   // attach the shield to the GPRS network with the APN, login and password
   while (!connected) {
@@ -131,7 +147,5 @@ void start_and_connect_modem(){
     }
   }
 
-  Serial.println("You're connected to the network");
-  Serial.println();
-  
+  Serial.println("You're connected to the network");  
 }
