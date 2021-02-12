@@ -88,6 +88,7 @@ Install the library that corresponds to your device.
 ### Grove Sensor Libraries
 
 - [ADXL345](https://github.com/Seeed-Studio/Accelerometer_ADXL345)
+- [ArduinoHttpClient](https://github.com/arduino-libraries/ArduinoHttpClient/)
 - [Bounce2](https://www.arduino.cc/reference/en/libraries/bounce2/)
 - [DHT](https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor)
 - [PMIC](https://github.com/arduino-libraries/Arduino_BQ24195)
