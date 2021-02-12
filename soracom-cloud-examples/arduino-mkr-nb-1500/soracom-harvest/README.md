@@ -8,5 +8,4 @@ You'll need to go to the Groups page from the menu to enable Soracom Harvest bef
 ## Required Libraries
 
 - [ArduinoHttpClient](https://github.com/arduino-libraries/ArduinoHttpClient/)
-- [ArduinoJson](https://github.com/bblanchon/ArduinoJson)
 - [MKRNB](https://github.com/arduino-libraries/MKRNB)
