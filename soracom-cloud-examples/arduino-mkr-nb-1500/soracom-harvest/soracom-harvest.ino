@@ -30,6 +30,7 @@ long interval = 20000; // milliseconds
 
 void setup() {
   pinMode(SARA_RESETN, OUTPUT);
+  digitalWrite(SARA_RESETN, LOW);
   pinMode(SARA_PWR_ON, OUTPUT);
   
   //Initialize serial and wait for port to open:
@@ -61,8 +62,7 @@ void loop() {
   } else {
     Serial.println("Modem disconnected, reconnecting");
     connected = false;
-    nbAccess.shutdown(); // Reset the modem
-    start_and_connect_modem();
+    connect_modem();
   }
 }
 
@@ -86,11 +86,9 @@ void post_data(String postData) {
 }
 
 void start_and_connect_modem(){
-  digitalWrite(SARA_RESETN, LOW);
-
   // Send Poweron pulse
   digitalWrite(SARA_PWR_ON, HIGH);
-  delay(150);
+  delay(300);
   digitalWrite(SARA_PWR_ON, LOW);
   delay(1000);
   // Turn on the modem
@@ -123,7 +121,7 @@ void start_and_connect_modem(){
   MODEM.sendf("AT+URAT=7");
   MODEM.waitForResponse(6000);
   MODEM.sendf("AT+UBANDMASK?");
-  MODEM.waitForResponse(2000);
+  MODEM.waitForResponse(6000);
   Serial.println(" done!");
   
   delay(2000);
@@ -149,3 +147,4 @@ void connect_modem(){
 
   Serial.println("You're connected to the network");  
 }
+
