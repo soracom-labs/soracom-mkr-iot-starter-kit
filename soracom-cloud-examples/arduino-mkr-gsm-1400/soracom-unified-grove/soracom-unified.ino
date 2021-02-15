@@ -544,7 +544,7 @@ void loop()
     data = data + getAccelerometer(separator);
   if (ENABLE_GPS && gpsOnline)
     data = data + getGps(separator);
-  if (ENABLE_BUTTON && gpsOnline)
+  if (ENABLE_BUTTON)
     data = data + getButton(separator);
   data = data + "}";
 
