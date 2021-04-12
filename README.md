@@ -5,7 +5,7 @@
 ![soracom-grove-all](./content/soracom-grove-all.png "A graphic of all the grove sensors attached to the kit.")
 
 The Soracom IoT Starter Kit includes everything you need to build your first connected device. It includes an [Arduino MKR GSM 1400](https://www.soracom.io/store/soracom-arduino-1400-starter-kit/) or an [Arduino MKR NB 1500](https://www.soracom.io/store/soracom-arduino-1500-starter-kit/) development board.
-Using the Soracom.io network and cloud platform, you can get your device connected and publishing data to a dashboard within minutes. 
+Using the [Soracom.io](https://soracom.io) network and cloud platform, you can get your device connected and publishing data to a dashboard within minutes. 
 
 ![kit-contents](./content/PENF4508.jpg "The contents of the kit")
 
@@ -13,20 +13,20 @@ Using the Soracom.io network and cloud platform, you can get your device connect
 - [Getting Started](#getting-started)
 - [Soracom Cloud Examples](./soracom-cloud-examples/)
   - [Arduino MKR GSM 1400 Examples](./soracom-cloud-examples/arduino-mkr-gsm-1400/)
-    - [send-data-to-soracom-harvest](soracom-cloud-examples/arduino-mkr-gsm-1400/send-data-to-soracom-harvest/)
-    - [soracom-unified-grove](soracom-cloud-examples/arduino-mkr-gsm-1400/soracom-unified-grove/)
+    - [Send-data-to-soracom-harvest](soracom-cloud-examples/arduino-mkr-gsm-1400/send-data-to-soracom-harvest/)
+    - [Soracom-unified-grove](soracom-cloud-examples/arduino-mkr-gsm-1400/soracom-unified-grove/)
   - [Arduino MKR NB 1500 Examples](./soracom-cloud-examples/arduino-mkr-nb-1500/)
-    - [send-data-to-soracom-harvest](soracom-cloud-examples/arduino-mkr-nb-1500/send-data-to-soracom-harvest/)
-    - [soracom-unified-grove](soracom-cloud-examples/arduino-mkr-nb-1500/soracom-unified-grove/)
+    - [Send-data-to-soracom-harvest](soracom-cloud-examples/arduino-mkr-nb-1500/send-data-to-soracom-harvest/)
+    - [Soracom-unified-grove](soracom-cloud-examples/arduino-mkr-nb-1500/soracom-unified-grove/)
 - [Grove Sensor Examples](./grove-sensor-examples/)
-  - [grove-accelerometer](./grove-sensor-examples/grove-accelerometer/)
-  - [grove-button](./grove-sensor-examples/grove-button/)
-  - [grove-buzzer](./grove-sensor-examples/grove-buzzer/)
-  - [grove-dht](grove-sensor-examples/grove-dht/)
-  - [grove-gps](./grove-sensor-examples/grove-gps/)
-  - [grove-magnetic](./grove-sensor-examples/grove-magnetic/)
-  - [grove-rangefinder](./grove-sensor-examples/grove-rangefinder/)
-  - [power-mangement](./grove-sensor-examples/power-management/)
+  - [Grove-Accelerometer](./grove-sensor-examples/grove-accelerometer/)
+  - [Grove-Button](./grove-sensor-examples/grove-button/)
+  - [Grove-Buzzer](./grove-sensor-examples/grove-buzzer/)
+  - [Grove-Dht](grove-sensor-examples/grove-dht/)
+  - [Grove-GPS](./grove-sensor-examples/grove-gps/)
+  - [Grove-Magnetic](./grove-sensor-examples/grove-magnetic/)
+  - [Grove-Rangefinder](./grove-sensor-examples/grove-rangefinder/)
+  - [Power-Mangement](./grove-sensor-examples/power-management/)
 
 
 # Getting Started
@@ -39,7 +39,7 @@ Using the Soracom.io network and cloud platform, you can get your device connect
   - [Install libraries](#install-libraries)
     - [Cellular Modem Support](#cellular-modem-support)
     - [Grove Sensor Libraries](#grove-sensor-libraries)
-- [Hello world!](#hello-world)
+- [Hello World Example!](#hello-world)
 
 ## Register Soracom Air SIM 
 
@@ -95,7 +95,7 @@ Install the library that corresponds to your device.
 - [Ultrasonic](https://github.com/Seeed-Studio/Seeed_Arduino_UltrasonicRanger)
 - [Wire](https://github.com/arduino/ArduinoCore-avr/tree/master/libraries/Wire)
   
-# Hello world!
+# Hello World Example!
 
 Try programming this basic sketch to your device. In depth instructions are provided as well. 
 
