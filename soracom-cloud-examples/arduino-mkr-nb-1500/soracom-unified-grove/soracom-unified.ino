@@ -276,6 +276,13 @@ void setup() {
   }
   if (Serial) Serial.println(">>> Starting Soracom MKR NB 1500 demo with Grove Sensor Kit!");
 
+  // Initialize Grove Temperature & Humidity sensor
+  if (ENABLE_DHT) {
+    if (Serial) Serial.print(">>> Initializing temperature & humidity...  ");
+    dht.begin();
+    if (Serial) Serial.println(" done!");
+  }
+
   // Initialize Grove Button bounce
   // BOUNCE SETUP
   btn.attach(BUTTON_PIN,INPUT); // USE EXTERNAL PULL-UP
